@@ -38,6 +38,7 @@ function updatePrevious() {
 
 
 
+
         
 
 
@@ -79,7 +80,7 @@ Tjek også om det allerede er opnået og opdater bonus-feltet hvis det er tilfæ
 function checkBonus() {
     let upperSectionTotal = 0;
 
-
+// 
 
 
 
