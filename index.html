@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="da">
 <head>
@@ -9,15 +7,53 @@
     <link rel="stylesheet" href="style.css">
     <script src="YatzyDice.js" defer></script>
     <script src="YatzySpil.js" defer></script>
- </head>
- <body>
-    <div class="container">
-        <h1>Yatzy Spil</h1>
-         <!-- Terninger sektion -->
-          
-        
+</head>
+<body>
+<div class="container">
+    <h1>Yatzy Spil</h1>
+    <!-- Terninger sektion -->
 
-        <!-- Scoreboard sektion -->
-       
+    <div class="dice"></div>
+
+    <div class="yatzy-pad">
+        <form>
+            <table>
+                <caption>Yatzy</caption>
+                <thead>
+                <tr>
+                    <td>
+                        Felt
+                    </td>
+                    <td>
+                        Score
+                    </td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <label for="ones">Énere</label>
+                    </td>
+                    <td>
+                        <input type="number" id="ones" readonly>
+                    </td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td>
+                        <label for="grand-total">Total</label>
+                    </td>
+                    <td>
+                        <input type="number" id="grand-total" readonly>
+                    </td>
+                </tr>
+                </tfoot>
+            </table>
+        </form>
     </div>
- </body>
+
+    <!-- Scoreboard sektion -->
+
+</div>
+</body>
