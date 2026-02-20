@@ -1,15 +1,23 @@
 /* CSS styling med Grid layout. Definerer "hvordan" siden ser ud - 
 farver, størrelser, positioner, animationer. Bruger CSS Grid til at organisere terninger og scoreboard.*/
 
+/* Lav grid layout for hele siden, centrerer indholdet og tilføjer lidt padding */
+
+
 body {
-    
+    display: grid;
+    place-items: center;
+    padding: 20px;
 }
 
 .container {
+        display: grid;
+        gap: 20px;
   
 }
 
 h1 {
+    
     
 }
 
