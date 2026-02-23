@@ -42,9 +42,6 @@ function calculateScores() {
 }
  
 
-
-
-
 /* function updatePrevious() opdaterer billederne (dice value 1 = die1.png) når man kaster med terningerne og viser de nye værdier. 
 Den skal kaldes efter hver kast for at sikre, at spilleren altid ser de aktuelle terningværdier på skærmen*/
 function updatePrevious() {
@@ -83,6 +80,8 @@ function roll() {
 Den skal kaldes, når spilleren klikker på et score-felt for at gemme deres score for den runde, opdatere pointtavlen og forberede spillet 
 til næste runde.*/
 function submitScore() {
+
+
 
 }
 
