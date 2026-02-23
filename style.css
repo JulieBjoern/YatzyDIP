@@ -22,22 +22,24 @@ body {
 
 /* Terninger sektion */
 .dice-section {
-
+    padding: 20px;
 }
 
 .dice-container {
-
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+ 
 }
 
-.dice {
-
+.die-img {
+    width: 100px;
 }
 
 
-
-.dice.held {
+.die-img.held {
+    opacity: 0.6;
     background: #ffeb3b;
-    border-color: #f57c00;
     transform: scale(0.95);
 }
 
