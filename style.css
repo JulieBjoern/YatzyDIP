@@ -3,22 +3,21 @@ farver, størrelser, positioner, animationer. Bruger CSS Grid til at organisere 
 
 /* Lav grid layout for hele siden, centrerer indholdet og tilføjer lidt padding */
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 body {
-    display: grid;
-    place-items: center;
-    padding: 20px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
 }
 
 .container {
-        display: grid;
-        gap: 20px;
-  
-}
-
-h1 {
-    
-    
+    max-width: 540px;
+    display: grid;
+    margin: 0 auto 0 auto;
+    justify-content: center;
 }
 
 /* Terninger sektion */
@@ -45,80 +44,89 @@ h1 {
 }
 
 
-
-
 .roll-button {
-  
+
 }
-
-
 
 
 /* Scoreboard */
-.scoreboard {
+.yatzy-pad {
     display: grid;
-    
+    grid-template-columns: auto auto;
+    row-gap: 0.2em;
+}
+
+.yatzy-pad > div {
+    /*border: 1px solid black;*/
+}
+
+.yatzy-pad > div > div {
+    /*border: 1px solid black;*/
+    display: inline;
+}
+
+.max-score {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input {
+    width: 15%;
+    cursor: pointer;
+    margin: 0 0 0 1em;
 }
 
 .score-row {
-    display: grid;
-    
 }
-
-
-
-.score-row.selectable {
-    cursor: pointer;
-}
-
 
 .score-row.selected {
-    
+
 }
 
 .score-row.used {
-    
+
 }
 
 .score-row label {
-    
+
 }
 
 .score-field, .summary-field {
-   
+
 }
 
 .score-field.selectable {
-   
+
 }
 
 .summary-row {
-   
+
 }
 
 .summary-row label {
-    
+
 }
 
 .total-row {
-    
+
 }
 
 /* Responsive design */
 @media (max-width: 600px) {
     .container {
-        
+
     }
 
     h1 {
-        
+
     }
 
     .dice-container {
-        
+
     }
 
     .score-row {
-        
+
     }
 }
