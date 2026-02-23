@@ -14,21 +14,33 @@ let dice = [
     { value: 0, isHeld: false }
 ]; 
 
-let throwCount = 0;  // Antal slag de 5 terningerne har tilsammen (max 3)
-
-
+let throwCount = 0;  
 let grandTotal = 0;
 
 /* function calculateScores() beregner alle mulige point-kombinationer baseret på de nuværende terningværdier og opdaterer pointtavlen med disse værdier. 
 Den skal kaldes hver gang terningerne kastes eller ændres, så pointtavlen altid viser de korrekte muligheder for spilleren.*/
 function calculateScores() {
     
-   
+    values = dice.map(d => d.value);
+    let results = getResults();
+    
+    const scoreIds = ["ones", "twos", "threes", "fours", "fives", "sixes", "1pair", "2pair", "3sames", "4sames", "fullhouse", "smallstraight", "largestraight", "chance", "yatzy"];
+    
+    for (let i = 0; i < results.length; i++) {
+        let scoreElement = document.getElementById(scoreIds[i]);
+
+        if (scoreElement) {
+            if (results[i] > 0) {
+                scoreElement.value = results[i];
+            }
+            else {
+                scoreElement.value = "";
+            }
+        }
+    }
+
 }
  
-
-
-
 
 /* function updatePrevious() opdaterer billederne (dice value 1 = die1.png) når man kaster med terningerne og viser de nye værdier. 
 Den skal kaldes efter hver kast for at sikre, at spilleren altid ser de aktuelle terningværdier på skærmen*/
@@ -64,31 +76,14 @@ function roll() {
 }
 
 
-
-
-
-
-
-
 /* function submitScore() til at submitte score og opdatere pointtavlen når spilleren vælger et score-felt. 
 Den skal kaldes, når spilleren klikker på et score-felt for at gemme deres score for den runde, opdatere pointtavlen og forberede spillet 
 til næste runde.*/
 function submitScore() {
 
+
+
 }
-
-
-
-
-
-// fucntion resetTurn() til at nulstille kast og terninger.
-function resetTurn() {
-    throwCount = 0;
-}
-
-
-
-
 
 
 /* function checkBonus() tjekker om man har fået bonus og opdaterer pointtavlen check if min. 63 point er nået i første del af pointtavlen 
@@ -99,10 +94,11 @@ function checkBonus() {
 }
 
 /**
- * Nulstiller kast-tælleren
+ * Nulstiller kast-tælleren når man hr kastet 3 gange
  */
 function resetThrowCount() {
-    throwCount = 0;
+ 
+
 }
 
 
