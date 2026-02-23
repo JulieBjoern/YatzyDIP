@@ -1,9 +1,6 @@
-/*Spil-logikken (hjerne). Håndterer alt der har med terninger og point-beregning at gøre:*/
+/*Spil-logikken (hjerne)*/
 
-/**
- * Returnerer alle mulige resultater med de nuværende terningværdier.
- * Rækkefølgen af resultaterne er den samme som på pointtavlen.
- */
+
 function getResults() {
     let results = new Array(15);
     for (let i = 0; i <= 5; i++) {
@@ -24,11 +21,7 @@ function getResults() {
 
 
 
-/**
- * Returnerer et array[7] der indeholder frekvensen af terningværdier.
- * Frekvens ved indeks v er antallet af terninger med værdien v, 1 <= v <= 6.
- * Indeks 0 bruges ikke.
- */
+/*bruges til at tælle hvor mange terninger der har hver værdi (1-6)*/ 
 function frequency() {
     let freq = new Array(7).fill(0);
     for (let value of values) {
@@ -37,19 +30,13 @@ function frequency() {
     return freq;
 }
 
-/**
- * Returnerer point for samme værdi for den givne terningværdi.
- * Returnerer 0, hvis ingen terninger har den givne værdi.
- * Pre: 1 <= value <= 6
- */
+/*Returnerer point for 1-6 ens (for den værdi der giver flest point).
+Returnerer 0, hvis der ikke er 2 terninger med samme værdi.*/
 function sameValuePoints(value) {
     return value * frequency()[value];
 }
 
-/**
- * Returnerer point for et par (for den værdi der giver flest point).
- * Returnerer 0, hvis der ikke er 2 terninger med samme værdi.
- */
+/*eksempel: Hvis der er 2 terninger med værdien 3, så returneres 6 point (3*2).*/
 function onePairPoints() {
     let highestNumbers = 0;
     let freq = frequency();
@@ -62,12 +49,7 @@ function onePairPoints() {
     return highestNumbers;
 }
 
-/**
- * Returnerer point for to par
- * (for de 2 værdier der giver flest point).
- * Returnerer 0, hvis der ikke er 2 terninger med samme værdi
- * og 2 andre terninger med samme men forskellig værdi.
- */
+/*returnerer point for to par (for de 2 værdier der giver flest point)*/
 function twoPairPoints() {
     let pairCount = 0;
     let result = 0;
@@ -88,10 +70,7 @@ function twoPairPoints() {
     return 0;
 }
 
-/**
- * Returnerer point for 3 ens.
- * Returnerer 0, hvis der ikke er 3 terninger med samme værdi.
- */
+
 function threeSamePoints() {
     let highestNumbers = 0;
     let freq = frequency();
@@ -104,10 +83,7 @@ function threeSamePoints() {
     return highestNumbers;
 }
 
-/**
- * Returnerer point for 4 ens.
- * Returnerer 0, hvis der ikke er 4 terninger med samme værdi.
- */
+
 function fourSamePoints() {
     let highestNumbers = 0;
     let freq = frequency();
@@ -120,10 +96,8 @@ function fourSamePoints() {
     return highestNumbers;
 }
 
-/**
- * Returnerer point for fuldt hus.
- * Returnerer 0, hvis der ikke er 3 terninger med samme værdi
- * og 2 andre terninger med samme men forskellig værdi.
+/*Returnerer point for fuldt hus. Returnerer 0, hvis der ikke er 3 terninger med samme værdi
+ og 2 andre terninger med samme men forskellig værdi.
  */
 function fullHousePoints() {
     let hasThreeSameEyes = false;
@@ -148,9 +122,7 @@ function fullHousePoints() {
     return 0;
 }
 
-/**
- * Returnerer point for lille straight.
- * Returnerer 0, hvis terningerne ikke viser 1,2,3,4,5.
+/* Returnerer point for lille straight. Returnerer 0, hvis terningerne ikke viser 1,2,3,4,5.
  */
 function smallStraightPoints() {
     let freq = frequency();
@@ -162,10 +134,7 @@ function smallStraightPoints() {
     return 0;
 }
 
-/**
- * Returnerer point for stor straight.
- * Returnerer 0, hvis terningerne ikke viser 2,3,4,5,6.
- */
+/* Returnerer point for stor straight. Returnerer 0, hvis terningerne ikke viser 2,3,4,5,6. */
 function largeStraightPoints() {
     let freq = frequency();
 
@@ -176,9 +145,7 @@ function largeStraightPoints() {
     return 0;
 }
 
-/**
- * Returnerer point for chance (summen af terningværdier).
- */
+
 function chancePoints() {
     let sum = 0;
 
@@ -188,10 +155,7 @@ function chancePoints() {
     return sum;
 }
 
-/**
- * Returnerer point for yatzy (50 point).
- * Returnerer 0, hvis der ikke er 5 terninger med samme værdi.
- */
+/* Returnerer point for yatzy (50 point). Returnerer 0, hvis der ikke er 5 terninger med samme værdi.*/
 function yatzyPoints() {
     let freq = frequency();
 
