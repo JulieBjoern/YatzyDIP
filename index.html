@@ -20,12 +20,11 @@
             <img src="Assets/die1.png" class="die-img" id="die3">
             <img src="Assets/die1.png" class="die-img" id="die4">
         </div>
-        <p id="turnLabel">Turn 1</p> 
-        
+        <p id="turnLabel">Turn 1</p>
+
         <button class="roll-button" id="rollButton">RollDice</button>
 
     </div>
-
 
     <div class="yatzy-pad">
         <div>
@@ -86,71 +85,99 @@
         <div>
             <input type="number" id="sixes" placeholder="0" readonly>
             <div>
-                <label for="upperSectionSum">Sum</label>
+                <label for="upperSectionSum">
+                    <span>Sum</span>
+                </label>
             </div>
             <div>
                 <input type="number" id="upperSectionSum" placeholder="0" readonly>
             </div>
             <div>
-                <label for="bonus">Bonus</label>
+                <label for="bonus">
+                    <span>Bonus</span>
+                </label>
             </div>
             <div>
-                <input type="number" id="bonus" placeholder="0" readonly>
+                <input type="number" id="bonus" placeholder="35" readonly>
             </div>
         </div>
         <div>
-            <label for="1pair">1 Par</label>
+            <label for="1pair" class="max-score">
+                <span>1 Par</span>
+                <span></span>
+            </label>
         </div>
         <div>
             <input type="number" id="1pair" placeholder="0" readonly>
         </div>
         <div>
-            <label for="2pair">2 Par</label>
+            <label for="2pair" class="max-score">
+                <span>2 Par</span>
+                <span></span>
+            </label>
         </div>
         <div>
             <input type="number" id="2pair" placeholder="0" readonly>
         </div>
         <div>
-            <label for="3sames">3 Ens</label>
+            <label for="3sames" class="max-score">
+                <span>3 Ens</span>
+                <span></span>
+            </label>
         </div>
         <div>
             <input type="number" id="3sames" placeholder="0" readonly>
         </div>
         <div>
-            <label for="4sames">4 Ens</label>
+            <label for="4sames" class="max-score">
+                <span>4 Ens</span>
+                <span></span>
+            </label>
         </div>
         <div>
             <input type="number" id="4sames" placeholder="0" readonly>
         </div>
         <div>
-            <label for="small">Lille Straight</label>
+            <label for="house" class="max-score">
+                <span>Fuldt Hus</span>
+                <span>25</span>
+            </label>
+        </div>
+        <div>
+            <input type="number" id="house" placeholder="0" readonly>
+        </div>
+        <div>
+            <label for="small" class="max-score">
+                <span>Lille Straight</span>
+                <span>30</span>
+            </label>
         </div>
         <div>
             <input type="number" id="small" placeholder="0" readonly>
         </div>
         <div>
-            <label for="large">Large Straight</label>
+            <label for="large" class="max-score">
+                <span>Stor Straight</span>
+                <span>40</span>
+            </label>
         </div>
         <div>
             <input type="number" id="large" placeholder="0" readonly>
         </div>
         <div>
-            <label for="house">Hus</label>
+            <label for="yatzy" class="max-score">
+                <span>Yatzy!</span>
+                <span>50</span>
+            </label>
         </div>
         <div>
-            <input type="number" id="house" placeholder="0" readonly>
+            <input type="number" id="yatzy" placeholder="0" readonly>
         </div>
         <div>
             <label for="chance">Chance</label>
         </div>
         <div>
             <input type="number" id="chance" placeholder="0" readonly>
-        </div>
-        <div>
-            <label for="yatzy">Yatzy!</label>
-        </div>
-        <div>
-            <input type="number" id="yatzy" placeholder="0" readonly>
         </div>
         <!--        Empty element for extra space between last rows.-->
         <div><p></p></div>

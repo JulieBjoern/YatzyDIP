@@ -35,9 +35,6 @@ function calculateScores() {
 }
 
 
-
-
-
 /* function updatePrevious() opdaterer billederne (dice value 1 = die1.png) når man kaster med terningerne og viser de nye værdier. 
 Den skal kaldes efter hver kast for at sikre, at spilleren altid ser de aktuelle terningværdier på skærmen*/
 function updatePrevious() {
