@@ -1,7 +1,4 @@
-/* CSS styling med Grid layout. Definerer "hvordan" siden ser ud - 
-farver, størrelser, positioner, animationer. Bruger CSS Grid til at organisere terninger og scoreboard.*/
-
-/* Lav grid layout for hele siden, centrerer indholdet og tilføjer lidt padding */
+/* CSS styling med grids */
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
@@ -20,7 +17,7 @@ body {
     justify-content: center;
 }
 
-/* Terninger sektion */
+
 .dice-section {
     padding: 20px;
 }
@@ -49,7 +46,7 @@ body {
 }
 
 
-/* Scoreboard */
+
 .yatzy-pad {
     display: grid;
     grid-template-columns: auto auto;
@@ -112,7 +109,7 @@ input {
 
 }
 
-/* Responsive design */
+/* evt responsive design */
 @media (max-width: 600px) {
     .container {
 
